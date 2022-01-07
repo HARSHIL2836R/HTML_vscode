@@ -1,0 +1,183 @@
+<html id="part_3" lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+  <title>Hello</title>
+  <head>
+    <style>
+        body {
+          background-image: none;
+          touch-action: none;
+          overscroll-behavior-y: contain;
+          padding: 10px;
+        }
+        .container {
+          opacity: .1;
+          position: absolute;
+          z-index: 999;
+          display: flex;
+          background-color: khaki;
+          outline: none;
+          border-radius: 10px;
+    
+          width: 100%;
+          height: 100%;
+          min-height: 250px;
+    
+          align-items: center;
+          justify-content: center;
+        }
+        .container:hover {
+          cursor: pointer;
+        }
+        .container h1 {
+          font-family: sans-serif;
+          opacity: .1;
+        }
+        p {
+          font-family: sans-serif;
+          opacity: .5;
+          padding: 10px;
+          text-align: center;
+          background-color: #EEE;
+          border-radius: 5px;
+        }
+        .image{
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          z-index: 999;
+        }
+        .hide{
+          visibility: hidden;
+        }
+        .images{
+          pointer-events:none;
+          touch-action: none;
+          -ms-touch-action: none;
+          z-index: -1;
+          align-content: center;
+          height: auto;
+          width: 100%;
+          margin-top: 5vmin;
+        }
+
+      </style>
+  </head>
+
+  <body id="change">
+  <div tabindex="1" class="container">
+    <h1 id="label">none</h1>
+  </div>
+    <div id="image" class="image"></div>
+    <p>Slide around in the yellow region above!</p>
+  </body>
+  <div class="hide">
+  <div id="img1">
+  <img class="images" id="" src="https://lh3.googleusercontent.com/tohf1cVRFhuMuxoTX47A-fTKFvUD8aa19IYoh4I0uokMsPdGH_7xYxCUK5cWgczeSlQsrJ0LynYFts4SU2_oQuCvOxGs0bxefQIVMUq7e-WtCKktQOceiE2sNM-kLDeIJNdXbh9N1mfNQBchVf_VQJ9WdvoTvHfIhKJmt03g5hABwLmx87lEPG-uLg8udmd0NOeZlrfJ5NKymZ6K-_x9WZEZsqrzLe66huvpxp3cIpVoQqxRpnkp2XvkXfkzt74LdwgA6teL84dpwX68WX2RtA1RoXAqtATmHZtXxKc2CDVz_z4ciwzm0Q-p7iiVeomuBOcz2SZlmQyWRpyBVwq63Y8bhTiKA9QYBQautHXdfyfgeVe5an-Bj3ZFTPtIqF3kIxPuT9rREyj0_Lkb8wld7PRY71LDohZw2zA_-2N5r2C2TmqFREdxF_RVigDo6HsZQsXsn7RAsMuW8MZDCYa5AxR3Ay3Rd0K74Rmis8_u38C6x1JDuWpIMOzyx_JaeRycWbqjpiAO9cwIlgvbYU9xy50UCmEmkCTpdqMxkloYkFi9A87h_R5VsniYpGfa6RF3mgvul3XgA8g9tGtwS-4mQEi205Djkfce4vtO7-1_Rf7frw0HECZhiwtFGnW5L7P0gXZ4DlfZSpMOUd1pp5iIHSUTNZTjmoVxYFW3XCXT4FsBScEl64BYsoTm4qRRlVMkNwRB79dJWLNb0KwfcAXbkeY=w243-h183-no?authuser=0" alt="">
+  </div>
+  <div id="img2">
+
+<img class="images" id="" src="https://lh3.googleusercontent.com/bgvAM2k08UC-_u1pGyGE2wjtK1lc7YZmXtKZQrbJri6eoY6ZXfKZMhMsXxXluR_Eo-PWs9TvMytO2SIqzOvl7AASH_Ta6qp445ZXuSmISgge4fn04LB12tl4wtQibpPqGwdRnbV7tS8B-qqDsW3qt-9nq5WRpAZQVvVaBnWFWwp7UMpAk3xWP1R5Qo9rGr1VmrMliS6iMQ1YXdcgRyWKeKrfQ4JsxV1DMJVKruOGXWGHxWIc1tuGs2O0FOGwf_lheR-rK8tqOPBTCl5zandG3_K_sCIPd7NWiHmyCOKEa0fHxu0jenxGixryTzYOmgURqDSybB0DRku6DulMa4OQSAfHTzabPx0q3vGTOqcmizUJjUiyH0gBcoCskWG-xB9DPw-K0crUyawe5eaEG4-aMqULtww8igI3VaRjkaNrqvEYqfbFv-uzHRyCcUaa7TYbKpNW5sHDncXnetHeWq5M9r_2YI-DPfjVB6hKBHeF-qayR6681bmjB2zFrp4SO4fZlFpx8ioBFNINNTaSq_igBOascLYa4yU3RAJ38BE6CfNsKeiwWzNeCBarQa_avnhfcbLtyzJ2z8aJEZhz1_y_O2AwY9kzE5j_j5P7BL8wag3d6LS3fKTjSpiLknjCe3iDusMQX23rXqqDSab_o9OaaCfsxWLp4nRVWljQjjvW1ec1XRGFBUB4HfaNApeDE2GWHCfb94XquAzXYC59O7ZYFWE=w629-h943-no?authuser=0" alt="">
+  </div>
+  <div id="img3">
+<img class="images" id="" src="https://lh3.googleusercontent.com/68u0u632KmXXLTlxo-Us_Ruzlc7L7Dz-iUrF9pDT34CElDUv_abgR2TmgHxLJauKXFZ4ZMA9prran7Be6klvPsOEIaAVGbho3cwgRQQo0CYw1MZPMEippUy5zYgG0qEB4UaJwOB36C7O-nLWnlNeXrzEk0485egZg73uVuEZeAyC9Zosb7fsT4VAfVf6tTU4mZmWvieZOgk1U8tr0t09GTYOozx_x3y3Qy412hkzLPM_ZgTaz8tTJDzUioW9sHMnAUueO9cIGaP9NaEgHCAZfToJZI9I8zJSxCVbasmaC48vhWPDDWP1D8aqVdvvlr95Jlh_BRV8CVBBDlYJAL8O3l2QC4tBuqwhPC8nZt2-5DuQ71ONyE8ovPlIgW9Ydzc3rX8wolO84PM082d0VIHAwIZKOUizxMvOUAoqquLRBGcMsHeS69X0W0ZbfQpIXGTo-TUdOB0J3RT4KVeQ_Lg-FWcHnq9apI-_MXxpFkSrlzsjAbZG-FELeSh7_9v0ZGoDN7qaR4WKf9Xen44vRjlbgUHsNbGemkruxD5ubeVfuoCMKj29jBenZ5FqesgE31UwS7A98MDv-LcOB1kCBDWuYM5sITK_rG9lwomvFpAurz8uiSmhTA2AuP7ClQ8cwoaMsUYdZX9viKWc7YB-azlEWIUWF2pJcGyP_fZSP2QWrh4-F1_wVk6EdcKdIjOFAM_gdXv9srdpwzlZFvbLBjLZKFE=w165-h220-no?authuser=0" alt="">
+
+  </div>
+  <div id="img4">
+
+  <img class="images" id="" src="https://lh3.googleusercontent.com/7Ek12tR42tFio4NFVBraH4bazDh8O0curtcv0gP2iRjJGaS_t-HUehnf4-2BAuaTZYbH4MRWT2e-bz-JXPMUuc4MYM3oBpPxQCpLn5BL8Fxkhv5tdXtmnBquEJyvh35aF_sE_5Iqjs8OkmlowfqZhXSOao70Gt9iFgvuF_78MPNvBPd3yd7nj-tK9bCKe5BRFSBmNE7-BThNkjbqTTsXF1IMsYWOFTgqGRry7eTQ2oIdVBPfQaDnCWHMQV_jmU-Ucje0zHXbCC4Y3qwPGW9EdREbTLkwlHsdKQ_oKSV0bWep7jPmZtHuUg-XwuI4MbGFgSxEBeGko9uEgzVPysD0Q3kVWAwIRl4NLAc61zEfHNGBLFr7As1qJyCjwg7LWIfjkqLewZ1wLmehUtHFELUAjhpCLQHFaG1OHL5CJ2Fu_MGg2tlPWhSSPdYuZSe8pl_RX0AsWJv-f6eqQt_luOhn1YVJngQbW68kwilyjGqWNt4GjujUlgnrZDsGK6Z1vCEonDeSqJcDod3tKILIC2ipJQBt0iYAEjKYAe9LBEJOPhT72r4avOFY4ZbI8PiLwiTzL46lNzxRpQvWgPlEe83_g39EphmNusxyJmpJjwnDiKqIZgIBT-UOxNcxNpdxWjc8fIfpKGUiYkGquhnFKjgxzR3HzPSqPEzNbqw-6GSynNr__a5y_ucjsJoZnpHvPzUCbPruGymhDZ1BL5WQoBDK4cQ=w708-h943-no?authuser=0" alt="">
+
+  </div>
+  </div>
+  <script>
+        var finished = false;
+        var container = document.querySelector(".container");
+        var label = document.querySelector("#label");
+    
+        container.addEventListener("touchstart", startTouch, false);
+        container.addEventListener("touchmove", moveTouch, false);
+    
+        // Swipe Up / Down / Left / Right
+        var initialX = null;
+        var initialY = null;
+    
+        function startTouch(e) {
+          initialX = e.touches[0].clientX;
+          initialY = e.touches[0].clientY;
+        };
+    
+        function moveTouch(e) {
+          if (initialX === null) {
+            return;
+          }
+    
+          if (initialY === null) {
+            return;
+          }
+    
+          var currentX = e.touches[0].clientX;
+          var currentY = e.touches[0].clientY;
+    
+          var diffX = initialX - currentX;
+          var diffY = initialY - currentY;
+
+          var a = document.getElementById('change');
+    
+          if (Math.abs(diffX) > Math.abs(diffY)) {
+            // sliding horizontally
+            if (diffX > 0) {
+              // swiped left
+              label.textContent = "left";
+              console.log("swiped left");
+
+
+              let b = document.getElementById('img1');
+              a.parentNode.replaceChild(b,a);
+
+              return
+
+            } else {
+              // swiped right
+              label.textContent = "right";
+              console.log("swiped right");
+
+            
+              let b = document.getElementById('img2');
+              a.parentNode.replaceChild(b,a);
+
+              return
+            }  
+          } else {
+            // sliding vertically
+            if (diffY > 0) {
+              // swiped up
+              label.textContent = "up";
+              console.log("swiped up");
+
+
+              let b = document.getElementById('img3');
+              a.parentNode.replaceChild(b,a);
+
+              return
+            } else {
+              // swiped down
+              label.textContent = "down";
+              console.log("swiped down");
+
+
+              let b = document.getElementById('img4');
+              a.parentNode.replaceChild(b,a);
+              return
+            }  
+          }
+    
+          initialX = null;
+          initialY = null;
+          
+          e.preventDefault();
+
+          finished = true;
+        };
+    
+  </script>   
+</html>

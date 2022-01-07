@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <title>Effect</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Aladin', cursive;
+            }
+            section{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: rgb(0, 0, 0);
+                overflow: hidden;
+            }
+            .text
+            {
+                position: relative;
+                color: rgb(189, 145, 0);
+                margin: 40px;
+                max-width: 800px;
+                font-size: 10em;
+                user-select: none;
+                text-shadow: 25px 25px 105px #ffc252;
+                -webkit-text-stroke-width: 5px;
+                -webkit-text-stroke-color: rgb(121, 103, 6);
+            }
+            .text span
+            {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+            }
+            .active
+            {
+                animation: smoke 6s linear forwards;
+                transform-origin: bottom;
+            }
+            @keyframes smoke {
+                0%
+                {
+                    opacity: 1;
+                    filter: blur(0px);
+                    transform: translateX(0)translateY(0)rotate(0deg);
+                }
+                50%
+                {
+                    opacity: 1;
+                    pointer-events: none;
+                }
+                100%
+                {
+                    opacity: 0;
+                    filter: blur(20px);
+                    transform: translateX(300px)translateY(-500px)rotate(90deg)scale(2);
+                }
+                
+            }
+            .butt{
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <p class='text'>Vaishnavee</p>
+        </section>
+        <script>
+            const text = document.querySelector('.text')
+            text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>");
+
+            const letters = document.querySelectorAll('span')
+
+            for (let i=0;i<letters.length; i++){
+                letters[i].addEventListener("mouseover",function(){
+                    letters[i].classList.add('active')
+                })
+            }          
+        </script>
+    </body>
+</html>

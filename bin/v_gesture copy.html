@@ -1,0 +1,119 @@
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+<title>Hello</title>
+<head>
+    <style>
+        body {
+          touch-action: none;
+          overscroll-behavior-y: contain;
+          padding: 10px;
+        }
+        .container {
+          display: flex;
+          background-color: khaki;
+          outline: none;
+          border-radius: 10px;
+    
+          width: 100%;
+          height: 100%;
+          min-height: 250px;
+    
+          align-items: center;
+          justify-content: center;
+        }
+        .container:hover {
+          cursor: pointer;
+        }
+        .container h1 {
+          font-family: sans-serif;
+          opacity: .5;
+        }
+        p {
+          font-family: sans-serif;
+          opacity: .5;
+          padding: 10px;
+          text-align: center;
+          background-color: #EEE;
+          border-radius: 5px;
+        }
+      </style>
+</head>
+<body>
+    <div tabindex="1" class="container">
+    <h1 id="label">none</h1>
+    </div>
+    <p id="me">Slide around in the yellow region above!</p>
+    <img src="https://www.cenaynailor.com/images/click-here.jpg" alt="none" id="he">
+    <script>
+        var flag = 0;
+        var container = document.querySelector(".container");
+        var label = document.querySelector("#label");
+    
+        container.addEventListener("touchstart", startTouch, false);
+        container.addEventListener("touchmove", moveTouch, false);
+    
+        // Swipe Up / Down / Left / Right
+        var initialX = null;
+        var initialY = null;
+    
+        function startTouch(e) {
+          initialX = e.touches[0].clientX;
+          initialY = e.touches[0].clientY;
+        };
+    
+        function moveTouch(e) {
+          if (initialX === null) {
+            return;
+          }
+    
+          if (initialY === null) {
+            return;
+          }
+    
+          var currentX = e.touches[0].clientX;
+          var currentY = e.touches[0].clientY;
+    
+          var diffX = initialX - currentX;
+          var diffY = initialY - currentY;
+    
+          if (flag === 0){
+            if (diffX<0 && diffY>0) {
+              label.textContent = "downward-slope";
+              console.log = 'downward';
+              flag = 1;
+            } 
+          }
+        
+
+          var initialXx = null;
+          var initialYx = null;
+          
+
+          var currentXx = e.touches[0].clientX;
+          var currentYx = e.touches[0].clientY;
+    
+          var diffXx = initialXx - currentXx;
+          var diffYx = initialYx - currentYx;
+
+          if (flag === 1){
+            if (diffXx<0 && diffYx<0) {
+              label.textContent = "upward-slope";
+              console.log = 'downward';
+              function images() {
+                var ae = document.getElementById('me');
+                var cd = document.getElementById('he');
+                ae.parentNode.replaceChild(cd,ae);
+              }
+            }
+          }
+    
+          initialX = null;
+          initialY = null;
+          
+          e.preventDefault();
+        };
+      </script>
+    
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link rel="import" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap">
+        <meta charset="utf-8">
+        <title>Effect</title>
+        <style>
+            @import url('http://fonts.cdnfonts.com/css/vtks-xtra');
+            body{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'VTKS Xtra', sans-serif;
+            }
+            section{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: #111;
+                overflow: auto;
+            }
+            .text
+            {
+                position: relative;
+                color: rgb(255, 75, 75);
+                margin: 40px;
+                max-width: 800px;
+                font-size: 8em;
+            }
+            .text span
+            {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+            }
+            .active
+            {
+                animation: smoke 2s linear forwards;
+                transform-origin: bottom;
+            }
+            @keyframes smoke {
+                0%
+                {
+                    opacity: 1;
+                    filter: blur(0px);
+                    transform: translateX(0)translateY(0)rotate(0deg);
+                }
+                50%
+                {
+                    opacity: 1;
+                    pointer-events: none;
+                }
+                100%
+                {
+                    opacity: 0;
+                    filter: blur(20px);
+                    transform: translateX(-100px)translateY(-300px)rotate(45deg)scale(2);
+                }
+                
+            }
+            .butt{
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <section>
+            <p class='text'>Harshil</p>
+            <button class="butt" onclick=Main()>Click me!</button>
+        </section>
+        <script>
+            const text = document.querySelector('.text')
+            text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>");
+
+            const letters = document.querySelectorAll('span')
+            
+            function Main(params) {
+                for (let i=0; i<letters.length; i++) {
+                    task(i);
+                }
+                function task(i) {
+                    setTimeout(function() {
+                        letters[i].classList.add('active');
+                    }, 500 * i);
+                }
+            }
+            
+        </script>
+    </body>
+</html>

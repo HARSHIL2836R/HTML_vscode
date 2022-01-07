@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=C, initial-scale=1.0">
+    <title>CSS is Awesome</title>
+    <link href="http://fonts.cdnfonts.com/css/october-crow" rel="stylesheet">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'October Crow', sans-serif;
+        }
+        body
+        {
+            display: flex;
+            -webkit-text-stroke: 1px rgba(153, 0, 0, 0.342);
+            justify-content: space-evenly;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(black, red);
+            overflow: hidden;
+        }
+        .container
+        {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .container .box
+        {
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            animation: animate 25s linear infinite;
+        }
+        @keyframes animate 
+        {
+            0%
+            {
+                transform: perspective(1000px) rotateX(0deg) rotateY(360deg) rotateZ(-360deg);
+            }  
+            100%
+            {
+                transform: perspective(1000px) rotateX(360deg) rotateY(0deg) rotateZ(360deg);
+            }  
+        }
+        .container .box span
+        {
+            position: absolute;
+            color: #fff;
+            font-size: 3.5em;
+            white-space: nowrap;
+            text-transform: uppercase;
+            font-weight: 900;
+            padding: 0px 10px;
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.5), transparent);
+            line-height: 0.76em;
+            transform-style: preserve-3d;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 25);
+            transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(2.5em);
+        }
+        .container .box span i:nth-child(1)
+        {
+            font-style: initial;
+            color: #ff0000;
+        }
+        .container .box span i:nth-child(2)
+        {
+            font-style: initial;
+            -webkit-text-stroke: 1px rgba(255, 0, 0, 0.5);
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <span style="--i:1;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:2;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:3;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:4;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:5;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:6;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:7;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:8;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:9;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:10;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:11;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:12;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:13;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:14;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:15;"><i>You'll</i> Float <i>T</i>oo!</span>
+            <span style="--i:16;"><i>You'll</i> Float <i>T</i>oo!</span>
+        </div>
+    </div>
+</body>
+</html>

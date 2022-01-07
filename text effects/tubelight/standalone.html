@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <title>It's Editable too!</title>
+        <link href="http://fonts.cdnfonts.com/css/october-crow" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'October Crow', sans-serif; 
+            }
+            body
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: #000; 
+            }
+            h2
+            {
+                position: relative;
+                font-size: 6em;
+                letter-spacing: 15px;
+                color: #0e3742;
+                text-transform: uppercase;
+                width: 100% ;
+                text-align: center;
+                -webkit-box-reflect: below 0em linear-gradient(transparent, #0004);
+                line-height: 1em;
+                outline: none;
+                animation: animate 5s linear infinite;
+                white-space: nowrap;
+            }
+            @keyframes animate {
+                0%,18%,20%,50.1%,60%,65.1%,90.1%,92%
+                {
+                    color: #0000;
+                    text-shadow: none;
+                }
+                18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+                {
+                    color: rgb(255, 0, 0);
+                    text-shadow: 0 0 10px #FF0000,
+                    0 0 20px #FF0000,
+                    0 0 40px #FF0000,
+                    0 0 80px #FF0000,
+                    0 0 160px #FF0000;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2 contenteditable="true">pennywise</h2>
+    </body>
+</html>

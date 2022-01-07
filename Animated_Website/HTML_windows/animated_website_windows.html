@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+        <title>Parallax Scrolling Website | Vanilla Javascript</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 18000, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+        </script>
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo">Jungle</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#sec">Destination</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+            <img src="https://lh6.googleusercontent.com/EHUcmy_yVQ74I2RaLMtmh9Bhp6-Q1lZDan2mW77tRNVI_EjKzPNs0ynzItSmGItxSTMHap3BNBprdvTEdev4=w1920-h942-rw" id="bird1">
+            <img src="https://lh5.googleusercontent.com/U2Ze1Sm0XS3GzgxkKAHYBMVpAHLBfqoLGaAC7WUHGv3J2Sg13KFzQtlZyCYIa_89phU5d0NflJdWiXRxv-7P=w1920-h942-rw" id="bird2">
+            <img src="https://lh3.googleusercontent.com/xn5bugUCSlU7_aM1V7avnyS0bfW6ANX7QsokrGuEkxuUHqXQ87WCzfw_MIkRsEIGUw9uFRp-sdYgs_U_r9gi=w1920-h942-rw" id="forest">
+            <a href="index.html#sec" id="btn">Explore</a>
+            <img src="https://lh3.googleusercontent.com/HM6qUwyRYSS8OpyoAEeDdQjhGOoD_AWOr28PTD64o9gycM1LsF0emHBCbi3UBBPCQp_YNB8nzfeUsFkcSUvQ=w1920-h942-rw" id="rocks">
+            <img src="https://lh6.googleusercontent.com/MwryTOs28br33bU2OBGiVEYZcggDXzu4ZeoROEOwDL8o3OihJzILx_yzty_DAkZ5zF5Kq_tbfvDz-JfFh1_T=w1920-h942-rw" id="water">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Parallax Scrolling Effect</h2>
+            <p>
+                This is an html made to show the parallax scrolling Effect.
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                I believe you observed how the elements moved while scrolling down smoothly...... 
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div id="about">
+                    <h2><big>ABOUT:-</big></h2> 
+                    <br>
+                    <p>You have already seen the whereabouts!</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div id="contact">
+                    <h2><big>Contact:-</big></h2> 
+                    <p>Why do you even want the contact ?!!!!!!!!!!! </p>
+                </div>
+
+            </p>
+        </div>
+
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let water = document.getElementById('water');
+            let forest = document.getElementById('forest');
+            let header = document.getElementById('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+
+                text.style.top = 50 + value * -0.5 + '%';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * 2 + 'px';
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                rocks.style.top = value * -0.12 + 'px';
+                forest.style.top =  value * 0.25 + 'px';
+                header.style.top =  value * 0.5 + 'px';
+
+            })
+        </script>
+    </body>
+</html>

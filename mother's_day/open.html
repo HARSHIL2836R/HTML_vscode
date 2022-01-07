@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Mother's Day</title>
+    <link href="http://fonts.cdnfonts.com/css/seasideresort" rel="stylesheet">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        body
+        {   
+            background-image: url('https://media.istockphoto.com/photos/watercolor-textured-background-picture-id887755698?k=6&m=887755698&s=612x612&w=0&h=_yEUF8gLpWjZv5IgwuWkecNVt4X4P7vpuFBKCWIuR44=');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .bod
+        {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;    
+            background: linear-gradient(45deg, rgb(0, 255, 255), transparent);
+            background-blend-mode: color-burn;
+            animation: anim 3s infinite;
+        }
+        @keyframes anim {
+            0%
+            {
+                background: linear-gradient(0deg, rgb(0, 255, 255), transparent);
+            }
+            25%
+            {
+                background: linear-gradient(45deg, rgb(0, 0, 255), transparent);
+            }
+            50%
+            {
+                background: linear-gradient(90deg, rgb(255, 255, 0), transparent);
+            }
+            75%
+            {
+                background: linear-gradient(135deg, rgb(255, 0, 0), transparent);
+            }
+            100%
+            {
+                background: linear-gradient(180deg, rgb(255, 0, 255), transparent);
+            }
+        }
+        .text 
+        {
+            border-radius: 10%;
+            text-justify: distribute;                                                                   
+            font-family: 'SeasideResortNF', sans-serif;
+            color: whitesmoke;
+            text-shadow: rgba(255, 0, 0, 0.6);
+            font-size: 2.6em;
+            transform-style: preserve-3d;
+            animation: text 6s infinite;
+        }
+        @keyframes text {
+            0%{}
+            100%
+            {
+                transform: scale(1.7) rotateZ(360deg) rotateX(20deg) rotateY(20deg);
+                filter: drop-shadow(10px 10px 20px white), saturate(1000%), hue-rotate(90deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bod">
+    <div class="text">
+    Happy Mother's Day
+    </div>
+    </div>
+</body>
+</html>
